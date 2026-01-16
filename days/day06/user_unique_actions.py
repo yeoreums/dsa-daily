@@ -4,8 +4,8 @@ def process_event(event):
     # event is a tuple: (user_id, action)
     # TODO:
     # store unique actions per user
-    user = event[0]
-    action = event[1]
+    user, action = event
+    
     if user not in user_actions:
         user_actions[user] = set()
     
